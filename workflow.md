@@ -1,6 +1,6 @@
-#Raspberry Pi workflow
+# Raspberry Pi workflow
 
-##SSH into Raspberry Pi from Mac
+## SSH into Raspberry Pi from Mac
 * Find the IP address of the Raspberry Pi device 
 ```shell
 ~ hostname -I
@@ -18,7 +18,7 @@
 pi@192.168.1.12's password:
 ```
 
-##Access Pi files from VSCode on Mac
+## Access Pi files from VSCode on Mac
 * This is only possible because of setup steps below
 1. Run the following command within VSCode Editor
 ```shell
@@ -30,14 +30,14 @@ pi@192.168.1.12's password:
 ~ rmate <file>
 ```
 
-##Use VSCode to edit Rasbperry Pi files
+## Use VSCode to edit Rasbperry Pi files
 * Visit the [following guide](https://blog.technologee.co.uk/remote-editing-using-vs-code/) to install RemoteVSCode extension on VSCode and rmate on the Pi device
 * Once installed, open VSCode editor and ⇧⌘P and then look for: Remote: Start Server
 * Run the following command within VSCode terminal `ssh -R 52698:127.0.0.1:52698 pi@<pi-ip-address>`
 * Follow the same ssh login steps as above
 * Then with the server running locally within VS Code we can call  `rmate <file>` on the Pi and the file will open within VS Code.
 
-##Further refinement
+## Further refinement
 * Adding the ssh tunnel element to the command when initiating the connection may be cumbersome and become difficult to remember. Fortunately, through the use of a `~/.ssh/config` file we can ensure that the tunnel is configured every time we create a connection to our Pi.
 
 ```
